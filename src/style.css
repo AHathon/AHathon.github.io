@@ -86,14 +86,14 @@ p {
 ul {
     list-style: none;
 }
-a {
+a, a span {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
 }
 h4 span a {
     text-decoration: underline;
 }
-a:hover {
+a:hover, a:hover span {
     transition: all 250ms ease-in-out;
 }
 
@@ -242,12 +242,18 @@ button img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    line-height: 1.3rem;
 }
-.main-nav li:hover a {
+.main-nav li:hover a, .main-nav li:hover a span {
     letter-spacing: 1px;
     font-weight: 500;
     transition: all 250ms ease-in-out;
     color: #00ff00;
+}
+.main-nav li a span {
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 @media screen and (min-width: 800px) {
@@ -283,6 +289,7 @@ button img {
         margin-top: -4px;
         width: auto;
         font-size:initial;
+        flex-direction: column;
     }
 }
 
