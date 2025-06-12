@@ -489,16 +489,15 @@
             <div class="text-box">
                 <h4 class="tags">
                     <span>C</span>
-                    <span>Raspberry Pi 3</span>
+                    <span>Raspberry Pi</span>
                     <span>OS dev</span>
                 </h4>
                 <h3>Microkernel</h3>
             </div>
             <p>
-                A work-in-progress microkernel designed to run on a Raspberry Pi 3.
+                A work-in-progress microkernel designed to run on Raspberry Pi hardware.
                 <br><br>
-                It has basic boot code to run in EL1 and initialize the MMU and UART, as well as 
-                a basic page allocator and exception handling.
+                It has a two stage boot process that first drops to EL1 and initializes UART and MMU, it then maps kernel to higher-half. It then sets up a page allocator and slab allocator, as well as GIC and local IRQ timer for scheduling. The initial processes are stored in a custom section in the kernel binary, and they're parsed during setup.'
             </p>
             <button class="secondary-btn">
                 See more
